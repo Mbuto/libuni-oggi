@@ -12,16 +12,4 @@ orario string
 }
 
 var sisegr = []extraseg {
-extraseg { 1,10,"" },
-extraseg { 7,10,"15.00-17.00" },
-extraseg { 8,10,"15.00-17.00" },
-extraseg { 10,10,"15.00-17.00" },
-extraseg { 9,10,"09.30-12.00" },
-extraseg { 11,10,"09.30-12.00" },
-extraseg { 12,10,"09.30-12.00" },
-extraseg { 14,10,"15.00-17.00" },
-extraseg { 15,10,"15.00-17.00" },
-extraseg { 16,10,"15.00-17.00" },
-extraseg { 17,10,"15.00-17.00" },
-extraseg { 18,10,"15.00-17.00" },
 }
