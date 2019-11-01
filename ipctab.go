@@ -20,6 +20,8 @@ var ipctab = []myipc {
 var veripc = ""
 
 func init_ipc() {
+// fix for heroku!
+return
 
 ipctab = nil
 t := time.Now().In(time.FixedZone("UTC+1", 0))
