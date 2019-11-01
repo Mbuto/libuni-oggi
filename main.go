@@ -1,27 +1,22 @@
 package main
 
 import (
-	"log"
-	"net/http"
-	"os"
-
-	"github.com/gin-gonic/gin"
-	_ "github.com/heroku/x/hmetrics/onload"
+    "fmt"
+    "os"
+    "log"
+    "net/http"
 )
 
+
 func main() {
-	port := os.Getenv("PORT")
+port := os.Getenv("PORT")
+if port == "" {
+        port = "8080"
+        log.Printf("Defaulting to port %s", port)
+}
 
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
+host, _ := os.Hostname()
+log.Printf("%s port %s vers. %s", host, port, version)
 
-	router := gin.New()
-	router.Use(gin.Logger())
-//	router.LoadHTMLGlob("templates/*.tmpl.html")
-//	router.Static("/static", "static")
-
-	router.GET("/", root)
-
-	router.Run(":" + port)
+log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
