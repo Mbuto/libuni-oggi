@@ -370,6 +370,7 @@ totcor++
 fmt.Fprintf(w, "<tr><td class=%s>", cls)
 if quando[k].primo == 1 {
 fmt.Fprintf(w, "<img class='myimg' src='images/new.png'>&nbsp;")
+/**************************** FIX per heroku - no DB
 ipcfnd := false
 for x:=0; x < len(ipctab); x++ {
   if quando[k].ncor == ipctab[x].ncor {
@@ -383,6 +384,7 @@ for x:=0; x < len(ipctab); x++ {
 if ipcfnd == false {
 	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
 }
+*****************************************************************/
 }
 m := trovalink(corsi[j].numco, corsi[j].nomeco)
 fmt.Fprintf(w, "%s", m)
