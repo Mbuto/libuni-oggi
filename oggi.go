@@ -926,7 +926,7 @@ Questo sito non utilizza nessun cookie<br>
 e non conserva nessun dato dei visitatori.
 </span>
 <p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543
-<p>v.%s&nbsp;-&nbsp;<a href="https://libuni.blogspot.com/p/docente-carlo-zappala.html"><span class=cp>&copy; 2018-2019 C. Zappal&agrave;</span></a>
+<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2019</span>
 <br>v.ac=%s v.qu=%s
 </body></html>
 `
