@@ -47,4 +47,4 @@ anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 901,"I Soci raccontano","Evaristo Seghetta","17.15-18.30","Auletta Libuni","" },
 anacor { 902,"Presentaz. Libro Semboloni","Angela Cingotti","17.15-18.30","Sala Muse","" },
 }
-const verac="191104.1128"
+const verac="191104.1801"
