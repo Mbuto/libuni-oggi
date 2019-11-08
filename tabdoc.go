@@ -40,6 +40,7 @@ tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
-tbdoc { "evaristo-seghetta" },
 tbdoc { "angela-cingotti" },
+tbdoc { "benito-verdacchi" },
+tbdoc { "grazieschi" },
 }
