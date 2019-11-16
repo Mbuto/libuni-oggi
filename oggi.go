@@ -27,8 +27,6 @@ func init() {
     http.HandleFunc("/stat", stat)
     http.HandleFunc("/cal", cal)
     http.HandleFunc("/calnext", calnext)
-//    http.HandleFunc("/ipc", ipc)
-//    http.HandleFunc("/isc", isc)
     http.HandleFunc("/orari", orari)
     http.HandleFunc("/info", info)
     http.HandleFunc("/sys", sys)
@@ -448,32 +446,6 @@ fmt.Fprintf(w, calForm1, gpass, extrasegclass, extrasegclass, d0, mesi[int(m0)],
 fmt.Fprintf(w, mioForm2, anno1_n, anno2_n, version, verac, verqu)
 }
 
-/*****************
-func isc(w http.ResponseWriter, r *http.Request) {
-ncor := 0
-ncor1 := r.FormValue("ncor")
-if ncor1 != "" {
-ncor, _ = strconv.Atoi(ncor1)
-} else {
-return
-}
-fmt.Fprintf(w, "<html><body>")
-ipcfnd := false
-for x:=0; x < len(ipctab); x++ {
-  if ncor == ipctab[x].ncor {
-	if ipctab[x].iscr < miniscr {
-		fmt.Fprintf(w, "<span class='blu noprint' title='Pochi iscritti'>%02d</span> ", ipctab[x].iscr)
-	}
-	ipcfnd = true
-	break
-  }
-}
-if ipcfnd == false {
-	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
-}
-fmt.Fprintf(w, "</body></html>")
-}
-*******************/
 
 const nxt = `
 <html>
