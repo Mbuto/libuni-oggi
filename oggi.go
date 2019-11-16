@@ -27,7 +27,7 @@ func init() {
     http.HandleFunc("/stat", stat)
     http.HandleFunc("/cal", cal)
     http.HandleFunc("/calnext", calnext)
-    http.HandleFunc("/ipc", ipc)
+//    http.HandleFunc("/ipc", ipc)
     http.HandleFunc("/isc", isc)
     http.HandleFunc("/orari", orari)
     http.HandleFunc("/info", info)
@@ -315,7 +315,7 @@ case 2:
 	}
 }
 
-init_ipc()
+//init_ipc()
 
 totcor := 0
 extrasegclass := "hid"
@@ -543,6 +543,7 @@ const ipcbot = `
 </html>`
 
 
+/****************************************
 func ipcmese(w http.ResponseWriter, mm int) {
 var mesi = []string { "", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre" }
 
@@ -593,7 +594,9 @@ if found == 0 {
 }
 fmt.Fprintf(w, "</table><p><b>%s:</b> Num. Corsi: %d - Critici: %d", mesi[mm], tot, cri)
 }
+**************************/
 
+/************************
 func ipc(w http.ResponseWriter, r *http.Request) {
 
 init_ipc()
@@ -623,6 +626,7 @@ for k:=1; k < 6; k++ {
 }
 fmt.Fprintf(w, ipcbot, veripc, version)
 }
+********************************************/
 
 func orari(w http.ResponseWriter, r *http.Request) {
 fmt.Fprintf(w, "<html><body><h2>Controllo orari sovrapposti</h2><table><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
