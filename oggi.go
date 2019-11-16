@@ -582,10 +582,7 @@ if found == 0 {
 	if corsi[j].numco == quando[m].ncor {
   		fmt.Fprintf(w, "<tr><td>%s</td><td class='red'>%d</td><td>%d</td><td>%d</td></tr>", 
 			corsi[j].nomeco, found, quando[m].gio, quando[m].mese)
-	} /*** else {
-  		fmt.Fprintf(w, "<tr><td>%d</td><td class='red'>%d</td><td>%d</td><td>%d</td></tr>", 
-			quando[m].ncor, found, quando[m].gio, quando[m].mese)
-	} ***/
+	}
   }
 		tot++
 		cri++
