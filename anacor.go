@@ -43,8 +43,7 @@ anacor { 160,"Yoga 3 Mer","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 161,"Yoga 3 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 902,"Presentaz. Libro Semboloni","Angela Cingotti","17.15-18.30","Sala Grande 2° Piano","" },
 anacor { 903,"I Soci raccontano","Benito Verdacchi","17.15-18.30","Auletta Libuni","" },
 anacor { 904,"Conferenza Infinito","Grazieschi","17.15-18.30","Auletta Libuni","" },
 }
-const verac="191119.1739"
+const verac="191130.2148"
