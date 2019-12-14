@@ -40,6 +40,5 @@ tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
-tbdoc { "benito-verdacchi" },
 tbdoc { "grazieschi" },
 }

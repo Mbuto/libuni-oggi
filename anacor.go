@@ -43,7 +43,6 @@ anacor { 160,"Yoga 3 Mer","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 161,"Yoga 3 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 903,"I Soci raccontano","Benito Verdacchi","17.15-18.30","Auletta Libuni","" },
-anacor { 904,"Conferenza Infinito","Grazieschi","17.00-18.30","Aula Paolmar","" },
+anacor { 904,"Conferenza Infinito","Grazieschi","17.00-18.30","Aula Palomar","" },
 }
-const verac="191205.1407"
+const verac="191208.1918"
