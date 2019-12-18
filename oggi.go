@@ -687,7 +687,7 @@ h3 { color: #f4ff81; }
 .gray { background-color: gray; }
 .sil { background-color: silver; }
 .xred { color: white; background-color: red; }
-.vi { color: white; background-color: #216A12; }
+.vi { color: black; background-color: #BACD66; }
 .right { text-align: right; }
 .rgt { align: right; }
 .sd { background-color:	rgb(255, 140, 102); }
