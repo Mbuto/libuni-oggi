@@ -45,4 +45,4 @@ anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 904,"Conferenza Infinito","Grazieschi","17.00-18.30","Aula Palomar","" },
 }
-const verac="191208.1918"
+const verac="191218.1159"
