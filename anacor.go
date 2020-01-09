@@ -28,7 +28,6 @@ anacor { 144,"Cultura Classica","Bordoni","15.30-17.00","","" },
 anacor { 145,"Greco Antico","Carlo Zappalà","15.30-17.00","","C.Zappalà" },
 anacor { 146,"Etruscologia 2","Batino","15,30-17.00","","" },
 anacor { 148,"Naturopatia","Ganz","17.15-18.45","","M.Maurizi" },
-anacor { 149,"Intelligenza Artificiale","Carlo Zappalà","17.15-18.45","","" },
 anacor { 150,"Poesia","Faletra","17.15-18.45","","" },
 anacor { 151,"Storia Dell'Arte","Luca Marchegiani","17.15-18.45","","" },
 anacor { 152,"Storia Del Territorio","Franco Boschi","17.15-18.45","","" },
@@ -45,4 +44,4 @@ anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 904,"Conferenza Infinito","Grazieschi","17.00-18.30","Aula Palomar","" },
 }
-const verac="200106.1515"
+const verac="200109.1432"
