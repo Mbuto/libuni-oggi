@@ -364,7 +364,7 @@ rarr = "&nbsp;"
 if quando[k].primo == 4 {
 cls = "vi"
 cls2 = "vi"
-rarr = "<span class=rarr>&rarr;</span>"
+//rarr = "<span class=rarr>&rarr;</span>"
 }
 if corsi[j].numco == quando[k].ncor {
 ss := fmt.Sprintf(";%d",corsi[j].numco)
