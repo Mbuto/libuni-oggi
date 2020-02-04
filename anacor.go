@@ -16,7 +16,7 @@ anacor { 132,"Arte Contemporanea","Perli","15.30-17.00","","" },
 anacor { 133,"Etruscologia 1","Sabrina Batino","15.30-17.00","","" },
 anacor { 134,"Letteratura Inglese","Meo","15.30-17.00","","" },
 anacor { 135,"Storia Pievese","Massimo Neri","15.30-17.00","","" },
-anacor { 137,"Italiano","Lucia Paoletti","15.30-17.00","","" },
+anacor { 137,"Italiano","Lucia Paoletti","15.30-17.00","Sala Muse","" },
 anacor { 138,"Opera Lirica","Colaiacomo Festuccia Margaritelli","15.30-17.00","","" },
 anacor { 139,"Musica Jazz","Aliotta","15.30-17.00","","" },
 anacor { 140,"Storia Contemporanea","Pittaro","15.30-17.00","","" },
@@ -44,4 +44,4 @@ anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 905,"Conferenza Cambiam. Climatico","prof. Caricchi","16.00-17.30","Aula Palomar","" },
 anacor { 906,"Asseblea Soci e Spettacolo","","16.00-18.30","Sala Muse","" },
 }
-const verac="200126.0938"
+const verac="200204.0936"
