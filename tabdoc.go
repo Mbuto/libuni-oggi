@@ -38,6 +38,5 @@ tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
-tbdoc { "prof.-caricchi" },
-tbdoc { "" },
+tbdoc { "carlo-giuliani" },
 }

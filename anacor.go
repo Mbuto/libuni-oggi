@@ -41,7 +41,6 @@ anacor { 160,"Yoga 3 Mer","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 161,"Yoga 3 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 905,"Conferenza Cambiam. Climatico","prof. Caricchi","16.00-17.30","Aula Palomar","" },
-anacor { 906,"Asseblea Soci e Spettacolo","","16.00-18.30","Sala Muse","" },
+anacor { 907,"I Soci Raccontano","Carlo Giuliani","17.00-18.30","","" },
 }
-const verac="200204.0936"
+const verac="200213.1420"
