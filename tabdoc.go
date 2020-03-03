@@ -38,5 +38,5 @@ tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
 tbdoc { "pandolfo" },
-tbdoc { "sabrina-batino" },
+tbdoc { "" },
 }
