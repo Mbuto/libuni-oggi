@@ -14,4 +14,5 @@ orario string
 var sisegr = []extraseg {
 extraseg { 7,1,"16:00-18:00" },
 extraseg { 9,1,"10:00-12:00" },
+extraseg { 9,3,"" },
 }
