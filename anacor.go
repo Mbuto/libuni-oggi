@@ -42,5 +42,7 @@ anacor { 161,"Yoga 3 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
 anacor { 909,"Sospensione Attività","","--","--","--" },
+anacor { 910,"I Soci raccontano","","16.00","D.Ford","" },
+anacor { 911,"Una storia di tutti","","16.30","M.Malandrino","" },
 }
-const verac="200305.1212"
+const verac="200310.1120"
