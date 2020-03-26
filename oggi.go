@@ -286,6 +286,10 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
 mes := int(m0)
 savedy0 := y0
+annoprimo := true
+if mes < 10 {
+        annoprimo = false
+}
 
 //FAKE ***********************************************
 // mes = 10
@@ -300,10 +304,14 @@ if mes < 1 || mes > 12 {
 return
 }
 
-//BUGFIX
-if mes < int(m0) {
-	y0++
+// CONTROLLO SE la coppia (mes, y0) è congrua con l'AA
+if (mes < int(m0)) && annoprimo {
+        y0++
 }
+if (annoprimo == false) && (mes >= 10) {
+        y0--
+}
+
 
 maxmes := 31
 switch mes {
