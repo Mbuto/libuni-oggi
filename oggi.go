@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "8.18:heroku"
+const version = "8.19:heroku"
 
 const miniscr = 10
 const aula_def = "Auletta Libuni"
