@@ -45,4 +45,4 @@ anacor { 909,"Sospensione Attività","","--","--","--" },
 anacor { 910,"I Soci raccontano","","16.00","D.Ford","" },
 anacor { 911,"Una storia di tutti","","16.30","M.Malandrino","" },
 }
-const verac="200310.1120"
+const verac="200407.1211"
