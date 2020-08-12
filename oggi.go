@@ -340,7 +340,7 @@ case 2:
 	}
 }
 
-init_ipc()
+//init_ipc()
 
 totcor := 0
 extrasegclass := "hid"
@@ -632,7 +632,7 @@ fmt.Fprintf(w, "</table><p><b>%s:</b> Num. Corsi: %d - Critici: %d", mesi[mm], t
 
 func ipc(w http.ResponseWriter, r *http.Request) {
 
-init_ipc()
+//init_ipc()
 
 fmt.Fprintf(w, ipchdr)
 mese := r.FormValue("mese")
