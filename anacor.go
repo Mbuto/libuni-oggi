@@ -1,5 +1,6 @@
-package main
 
+// file: anacor.go
+package main
 type anacor struct {
 numco int
 nomeco string
@@ -10,39 +11,18 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 130,"Economia","Aldo Sorci","15.30-17.00","","" },
-anacor { 131,"Le Tre Grandi Religioni","Don Simone- Mauro Pesce-A.Rita Caponera","15.30-17.00","","" },
-anacor { 132,"Arte Contemporanea","Perli","15.30-17.00","","" },
-anacor { 133,"Etruscologia 1","Sabrina Batino","15.30-17.00","","" },
-anacor { 134,"Letteratura Inglese","Meo","15.30-17.00","","" },
-anacor { 135,"Storia Pievese","Massimo Neri","15.30-17.00","","" },
-anacor { 137,"Italiano","Lucia Paoletti","15.30-17.00","","" },
-anacor { 138,"Opera Lirica","Colaiacomo Festuccia Margaritelli","15.30-17.00","","" },
-anacor { 139,"Musica Jazz","Aliotta","15.30-17.00","","" },
-anacor { 140,"Storia Contemporanea","Pittaro","15.30-17.00","","" },
-anacor { 141,"Storia Del Cinema","Andrea Colaiacomo","15.30-17.00","","" },
-anacor { 142,"Personaggi Dell'Umbria","Marilena Rossi","15.30-17.00","","" },
-anacor { 143,"Astronomia","Caselli","15.30-17.00","","" },
-anacor { 144,"Cultura Classica","Bordoni","15.30-17.00","","" },
-anacor { 145,"Greco Antico","Carlo Zappalà","15.30-17.00","","" },
-anacor { 146,"Etruscologia 2","Batino","15,30-17.00","","" },
-anacor { 148,"Naturopatia","Ganz","17.15-18.45","","" },
-anacor { 150,"Poesia","Faletra","17.15-18.45","","" },
-anacor { 151,"Storia Dell'Arte","Luca Marchegiani","17.15-18.45","","" },
-anacor { 152,"Storia Del Territorio","Franco Boschi","17.15-18.45","","" },
-anacor { 153,"Danza In Cerchio 2","Lorenzi","18.00-19.30","3°Piano","" },
-anacor { 154,"Danza In Cerchio 1","Botti-Lorenzi","18.00-19.30","3°Piano","" },
-anacor { 155,"Danza In Cerchio 3","Botti","18.00-19.30","3°Piano","" },
-anacor { 156,"Yoga 2 Mer","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 157,"Yoga 1 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 158,"Yoga 4 Mer","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 159,"Yoga 1 Mer","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 160,"Yoga 3 Mer","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 161,"Yoga 3 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 162,"Yoga 4 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 163,"Yoga 2 Lun","Pandolfo","19.00-20.30","3°Piano","" },
-anacor { 909,"Sospensione Attività","","--","--","--" },
-anacor { 910,"I Soci raccontano","","16.00","D.Ford","" },
-anacor { 911,"Una storia di tutti","","16.30","M.Malandrino","" },
+anacor { 165, "Astronomia (R) 2019-2020", "Caselli", "15.30-17.00", "", "" },
+anacor { 166, "Cultura Classica (R) 2019-2020", "Bordoni", "15.30-17.00", "", "" },
+anacor { 167, "Danza In Cerchio 3 (R) 2019-2020", "Botti", "19:30-21:00", "", "" },
+anacor { 168, "Etruscologia 2 (R) 2019-2020", "Batino", "15.30-17.00", "", "" },
+anacor { 169, "Letteratura Sn (R) 2019-2020", "Mastella", "19:30-21:00", "", "" },
+anacor { 170, "Musica Jazz (R) 2019-2020", "Aliotta", "15.30-17.00", "", "" },
+anacor { 171, "Opera Lirica (R) 2019-2020", "Colaiacomo Festuccia Margaritelli", "15.30-17.00", "", "" },
+anacor { 172, "Personaggi Dell_Umbria (R) 2019-2020", "Marilena Rossi", "15.30-17.00", "", "" },
+anacor { 173, "Storia Del Territorio (R) 2019-2020", "Franco Boschi", "15.30-17.00", "", "" },
+anacor { 174, "Storia Dell_Arte (R) 2019-2020", "Luca Marchegiani", "15.30-17.00", "", "" },
+anacor { 175, "Storia Pievese (R) 2019-2020", "Massimo Neri", "15.30-17.00", "", "" },
+anacor { 176, "Yoga 4 Lun (R) 2019-2020", "Pandolfo", "19:30-21:00", "", "" },
+anacor { 1000, "Storia del Cinema", "A. Colaiacomo", "15.30-17.00", "", "" },
 }
-const verac="200407.1211"
+const verac="2020-07-31 16:48:12"
