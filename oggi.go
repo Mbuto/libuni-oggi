@@ -115,10 +115,12 @@ if r.Method == "POST" {
 		errore(w,"Errore Giorno non numerico", giorno)
 		return
 	}
+/*********************** PIPPE
 	if (aa == anno2_n && mm > 6) || (aa == anno1_n && mm < 10) {
 		errore(w,"Errore: questa data non esiste nel Calendario Corsi: ", anno + "/" + mese + "/" + giorno)
 		return
 	}
+************************/
 	t = time.Date(aa, time.Month(mm), gg, 0, 0, 0, 0, time.FixedZone("UTC+1", 0))
 	yoko = "ono"
 }
@@ -132,12 +134,14 @@ if (y < y0) || (x < x0) {
 }
 
 fmt.Fprintf(w,mioForm0)
+/******************** PIPPE
 if (m > time.June && y == anno2_n ) || (m < time.October && y == anno1_n ) {
 	disp_buone_vacanze(w)
 	fmt.Fprintf(w,mioForm3,y,m,d)
 	fmt.Fprintf(w,mioForm2,anno1_n, anno2_n, version, verac, verqu)
 	return
 }
+***************************/
 if (m == time.December && d >= 20) || (m == time.January && d <= 6) {
 	disp_buone_feste(w)
 	t = time.Date(anno2_n, time.January, 6, 0, 0, 0, 0, time.FixedZone("UTC+1", 0))
@@ -340,7 +344,7 @@ case 2:
 	}
 }
 
-//init_ipc()
+init_ipc()
 
 totcor := 0
 extrasegclass := "hid"
@@ -632,7 +636,7 @@ fmt.Fprintf(w, "</table><p><b>%s:</b> Num. Corsi: %d - Critici: %d", mesi[mm], t
 
 func ipc(w http.ResponseWriter, r *http.Request) {
 
-//init_ipc()
+init_ipc()
 
 fmt.Fprintf(w, ipchdr)
 mese := r.FormValue("mese")
