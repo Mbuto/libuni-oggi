@@ -513,9 +513,12 @@ const nxt = `
 </html>`
 
 func qsegr(g int, m int, wd int) string {
+//pezza per Special !!!
+/*******************************
 if m < 10 && m > 6 {
 	return("&nbsp;")
 }
+****************************/
 if (m == 12 && g > 20) || (m == 1 && g < 7) {
 	return("&nbsp;")
 }

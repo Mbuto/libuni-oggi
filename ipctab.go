@@ -4,8 +4,8 @@ import (
     "log"
     "time"
     "fmt"
-    "database/sql"
-    _ "github.com/mattn/go-sqlite3"
+//    "database/sql"
+//    _ "github.com/mattn/go-sqlite3"
 )
 
 type myipc struct {
@@ -26,6 +26,7 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 c := fmt.Sprintf("%v", t)
 veripc = c[:19]
 
+/**************************************************************
 database, err1 := sql.Open("sqlite3", "../libuni.db")
 if err1 != nil {
 log.Fatalf("ERR DB Open %v\n", err1)
@@ -48,5 +49,5 @@ for rows.Next() {
 	ipctab = append(ipctab, new)
 }
 rows.Close()
-
+************************************************************/
 }
