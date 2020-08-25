@@ -19,7 +19,7 @@ anacor { 169, "Letteratura Sn (R) 2019-2020", "Mastella", "19:30-21:00", "", "" 
 anacor { 170, "Musica Jazz (R) 2019-2020", "Aliotta", "15.30-17.00", "", "" },
 anacor { 171, "Opera Lirica (R) 2019-2020", "Colaiacomo Festuccia Margaritelli", "15.30-17.00", "", "" },
 anacor { 172, "Personaggi Dell_Umbria (R) 2019-2020", "Marilena Rossi", "15.30-17.00", "", "" },
-anacor { 173, "Storia Del Territorio (R) 2019-2020", "Franco Boschi", "15.30-17.00", "", "" },
+anacor { 173, "Storia Del Territorio (R) 2019-2020", "Franco Boschi", "17.30-19.00", "", "" },
 anacor { 174, "Storia Dell_Arte (R) 2019-2020", "Luca Marchegiani", "15.30-17.00", "", "" },
 anacor { 175, "Storia Pievese (R) 2019-2020", "Massimo Neri", "15.30-17.00", "", "" },
 anacor { 176, "Yoga 4 Lun (R) 2019-2020", "Pandolfo", "19:30-21:00", "", "" },
