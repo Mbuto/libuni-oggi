@@ -666,7 +666,7 @@ m0 := int(mx)
 // set-dic
 for k:=9; k < 13; k++ {
 //boh?
-    if /* m0 >= 10 && */ m0 < 13 && k >= m0 {
+    if |* m0 >= 10 && *| m0 < 13 && k >= m0 {
 	if m0 == k {
 		ipcmese(w, k, gg)
     	} else {
