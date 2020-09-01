@@ -29,8 +29,8 @@ func init() {
     http.HandleFunc("/stat", stat)
     http.HandleFunc("/cal", cal)
     http.HandleFunc("/calnext", calnext)
-    http.HandleFunc("/ipc", ipc)
-    http.HandleFunc("/isc", isc)
+//    http.HandleFunc("/ipc", ipc)
+//    http.HandleFunc("/isc", isc)
     http.HandleFunc("/orari", orari)
     http.HandleFunc("/info", info)
 //    http.HandleFunc("/sys", sys)
@@ -399,6 +399,7 @@ totcor++
 fmt.Fprintf(w, "<tr><td class=%s>", cls)
 if quando[k].primo == 1 {
 fmt.Fprintf(w, "<img class='myimg' src='images/new.png'>&nbsp;")
+/****************************************************************** NO count iscritti
 ipcfnd := false
 for x:=0; x < len(ipctab); x++ {
   if quando[k].ncor == ipctab[x].ncor {
@@ -412,6 +413,7 @@ for x:=0; x < len(ipctab); x++ {
 if ipcfnd == false {
 	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
 }
+*************************************************************************** NO count **/
 }
 m := trovalink(corsi[j].numco, corsi[j].nomeco)
 fmt.Fprintf(w, "%s", m)
@@ -475,6 +477,7 @@ fmt.Fprintf(w, calForm1, gpass, extrasegclass, extrasegclass, d0, mesi[int(m0)],
 fmt.Fprintf(w, mioForm2, anno1_n, anno2_n, version, verac, verqu)
 }
 
+/****************************************************************************
 func isc(w http.ResponseWriter, r *http.Request) {
 ncor := 0
 ncor1 := r.FormValue("ncor")
@@ -499,6 +502,7 @@ if ipcfnd == false {
 }
 fmt.Fprintf(w, "</body></html>")
 }
+*************************************************************************/
 
 const nxt = `
 <html>
@@ -637,6 +641,7 @@ if found == 0 {
 fmt.Fprintf(w, "</table><p><b>%s:</b> Num. Corsi: %d - Critici: %d", mesi[mm], tot, cri)
 }
 
+/***************************************************** NO
 func ipc(w http.ResponseWriter, r *http.Request) {
 
 init_ipc()
@@ -684,6 +689,7 @@ for k:=1; k < 6; k++ {
 }
 fmt.Fprintf(w, ipcbot, veripc, version)
 }
+***********************************************************************/
 
 func orari(w http.ResponseWriter, r *http.Request) {
 fmt.Fprintf(w, "<html><body><h2>Controllo orari sovrapposti</h2><table><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
