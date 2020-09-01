@@ -399,11 +399,7 @@ totcor++
 fmt.Fprintf(w, "<tr><td class=%s>", cls)
 if quando[k].primo == 1 {
 fmt.Fprintf(w, "<img class='myimg' src='images/new.png'>&nbsp;")
-
-//Special
-//ipcfnd := false
-ipcfnd := true
-/**********************************************
+ipcfnd := false
 for x:=0; x < len(ipctab); x++ {
   if quando[k].ncor == ipctab[x].ncor {
 	if ipctab[x].iscr < miniscr {
@@ -413,7 +409,6 @@ for x:=0; x < len(ipctab); x++ {
 	break
   }
 }
-******************************************/
 if ipcfnd == false {
 	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
 }
@@ -518,12 +513,12 @@ const nxt = `
 </html>`
 
 func qsegr(g int, m int, wd int) string {
-//pezza per Special !!!
-/*******************************
+// pezza per Special
+/******************************************************
 if m < 10 && m > 6 {
 	return("&nbsp;")
 }
-****************************/
+*******************************************************/
 if (m == 12 && g > 20) || (m == 1 && g < 7) {
 	return("&nbsp;")
 }
