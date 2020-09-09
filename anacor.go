@@ -23,6 +23,6 @@ anacor { 173, "Storia Del Territorio (R) 2019-2020", "Franco Boschi", "17.30-19.
 anacor { 174, "Storia Dell_Arte (R) 2019-2020", "Luca Marchegiani", "15.30-17.00", "", "" },
 anacor { 175, "Storia Pievese (R) 2019-2020", "Massimo Neri", "15.30-17.00", "", "" },
 anacor { 176, "Yoga 4 Lun (R) 2019-2020", "Pandolfo", "19:30-21:00", "", "" },
-anacor { 1000, "Storia del Cinema", "A. Colaiacomo", "15.30-17.00", "", "" },
+anacor { 1000, "Storia del Cinema", "A. Colaiacomo", "17.15-18.45", "", "" },
 }
-const verac="2020-07-31 16:48:12"
+const verac="2020-09-09 15:05:12"
