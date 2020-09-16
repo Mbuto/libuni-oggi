@@ -6,7 +6,6 @@ import (
     "strconv"
     "strings"
     "net/http"
-    "net/url"
     "os"
     "log"
 )
@@ -29,11 +28,8 @@ func init() {
     http.HandleFunc("/stat", stat)
     http.HandleFunc("/cal", cal)
     http.HandleFunc("/calnext", calnext)
-//    http.HandleFunc("/ipc", ipc)
-//    http.HandleFunc("/isc", isc)
     http.HandleFunc("/orari", orari)
     http.HandleFunc("/info", info)
-//    http.HandleFunc("/sys", sys)
 // MAGIC!
     http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images/"))))
     http.Handle("/text/", http.StripPrefix("/text/", http.FileServer(http.Dir("text/"))))
@@ -60,12 +56,6 @@ if r.URL.Path != "/" {
                 }
 mylog("Init: " + version + "\n")
 
-/******************************
-if r.URL.Path != "/" {
-			fmt.Fprintf(w, "<html><head><title>Non trovata</title><body><h1>Pagina %s non trovata.</h1><a href=/>Home</a></body></html>", r.URL.Path)
-			return
-		}
-*******************************/
 //FORSEMENTE...
 t := time.Now().In(time.FixedZone("UTC+1", 0))
 
@@ -344,7 +334,6 @@ case 2:
 	}
 }
 
-init_ipc()
 
 totcor := 0
 extrasegclass := "hid"
@@ -397,24 +386,11 @@ ss := fmt.Sprintf(";%d",corsi[j].numco)
 if !strings.Contains(s,ss) && (quando[k].mese == mes) {
 totcor++
 fmt.Fprintf(w, "<tr><td class=%s>", cls)
+
 if quando[k].primo == 1 {
 fmt.Fprintf(w, "<img class='myimg' src='images/new.png'>&nbsp;")
-/****************************************************************** NO count iscritti
-ipcfnd := false
-for x:=0; x < len(ipctab); x++ {
-  if quando[k].ncor == ipctab[x].ncor {
-	if ipctab[x].iscr < miniscr {
-		fmt.Fprintf(w, "<span class='blu noprint' title='Pochi iscritti'>%02d</span> ", ipctab[x].iscr)
-	}
-	ipcfnd = true
-	break
-  }
 }
-if ipcfnd == false {
-	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
-}
-*************************************************************************** NO count **/
-}
+
 m := trovalink(corsi[j].numco, corsi[j].nomeco)
 fmt.Fprintf(w, "%s", m)
 fmt.Fprintf(w, "<br><small>%s</small>", corsi[j].doce)
@@ -477,32 +453,6 @@ fmt.Fprintf(w, calForm1, gpass, extrasegclass, extrasegclass, d0, mesi[int(m0)],
 fmt.Fprintf(w, mioForm2, anno1_n, anno2_n, version, verac, verqu)
 }
 
-/****************************************************************************
-func isc(w http.ResponseWriter, r *http.Request) {
-ncor := 0
-ncor1 := r.FormValue("ncor")
-if ncor1 != "" {
-ncor, _ = strconv.Atoi(ncor1)
-} else {
-return
-}
-fmt.Fprintf(w, "<html><body>")
-ipcfnd := false
-for x:=0; x < len(ipctab); x++ {
-  if ncor == ipctab[x].ncor {
-	if ipctab[x].iscr < miniscr {
-		fmt.Fprintf(w, "<span class='blu noprint' title='Pochi iscritti'>%02d</span> ", ipctab[x].iscr)
-	}
-	ipcfnd = true
-	break
-  }
-}
-if ipcfnd == false {
-	fmt.Fprintf(w, "<span class='xred noprint' title='Nessun iscritto'>00</span> ")
-}
-fmt.Fprintf(w, "</body></html>")
-}
-*************************************************************************/
 
 const nxt = `
 <html>
@@ -556,140 +506,6 @@ m1 := ((mes) % 12) + 1
 fmt.Fprintf(w, nxt, m1)
 }
 
-const ipchdr = `
-<html>
-<head><title>Controllo Iscrizioni</title>
-<link rel='stylesheet' href='/text/w3.css'>
-<style>
-.yel {background-color: yellow; color: red; }
-.red {background-color: red; color: white; }
-</style>
-</head>
-<body>
-<div class='w3-container'>
-<table><tr><td width='50%%' valign=top>
-<h1>Numero di Iscritti ai Corsi</h1>
-Cliccando sul <u>nome corso</u> si accede alla lista degli iscritti.
-`
-
-const ipcbot = `
-<p><i>Dati del: %s</i></p>
-<p><a class='w3-button w3-border w3-border-blue' href="javascript:window.close()">Chiudi</a>
-<p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543
-<p>v.%s&nbsp;-&nbsp;<a href="https://libuni.blogspot.com/p/docente-carlo-zappala.html"><span class=cp>&copy; 2018-2019-2020 C. Zappal&agrave;</span></a>
-</td><td width='50%%' valign='top'><iframe name=que width='800' height='800' srcdoc='<h2>Cliccando sul nome corso, in questo spazio apparir&agrave; la lista degli iscritti.</h2>'></iframe></td></tr></table>
-</div></body>
-</html>`
-
-
-func ipcmese(w http.ResponseWriter, mm int, gg int) {
-var mesi = []string { "", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre" }
-
-// ad Aprile, ad Ottobre
-d := ""
-if mm == 4 || mm == 8 || mm == 10 {
-	d = "d"
-}
-fmt.Fprintf(w, "<h3>Corsi che iniziano a%s %s</h3>", d, mesi[mm])
-// fmt.Fprintf(w, "DBG: mm=%d gg=%d<br>", mm, gg)
-fmt.Fprintf(w, "<table><tr><th>Corso</th><th>Iscritti</th><th>Giorno</th><th>Mese</th></tr>")
-tot := 0
-cri := 0
-for m :=0; m < len(quando); m++ {
-found := 0
-if quando[m].mese == mm && quando[m].primo == 1 {
-for k:=0; k < len(ipctab); k++ {
- if quando[m].ncor == ipctab[k].ncor {
-  for j := 0; j < len(corsi); j++ {
-	if corsi[j].numco == ipctab[k].ncor {
-		found = ipctab[k].iscr
-		cls := ""
-		if ipctab[k].iscr < miniscr {
-			cls = "yel"
-			cri++
-		}
-//		descrizione := strings.Replace(url.QueryEscape(corsi[j].nomeco), "%", "%%", -1)
-		descrizione := url.QueryEscape(corsi[j].nomeco)
-		anc := fmt.Sprintf("<a class='w3-button w3-border w3-border-blue' target=que href='http://localhost:8081/percorso?cr=%d&ds=%s&h=1'>", corsi[j].numco, descrizione)
-		a := ""
-		if quando[m].gio <= gg {
-			a = "A"
-		}
-  		fmt.Fprintf(w, "<tr><td>%s</td><td class='%s'>%d</td><td>%d</td><td>%d</td><td>%s</td></tr>", 
-			anc + corsi[j].nomeco + "</a>", cls, found, quando[m].gio, quando[m].mese, a)
-		tot++
-		break
-	}
-  }
- }
-}
-if found == 0 {
-  for j := 0; j < len(corsi); j++ {
-	if corsi[j].numco == quando[m].ncor {
-  		fmt.Fprintf(w, "<tr><td>%s</td><td class='red'>%d</td><td>%d</td><td>%d</td></tr>", 
-			corsi[j].nomeco, found, quando[m].gio, quando[m].mese)
-	} /*** else {
-  		fmt.Fprintf(w, "<tr><td>%d</td><td class='red'>%d</td><td>%d</td><td>%d</td></tr>", 
-			quando[m].ncor, found, quando[m].gio, quando[m].mese)
-	} ***/
-  }
-		tot++
-		cri++
-}
-}
-}
-fmt.Fprintf(w, "</table><p><b>%s:</b> Num. Corsi: %d - Critici: %d", mesi[mm], tot, cri)
-}
-
-/***************************************************** NO
-func ipc(w http.ResponseWriter, r *http.Request) {
-
-init_ipc()
-
-fmt.Fprintf(w, ipchdr)
-mese := r.FormValue("mese")
-if mese != "" {
-mm, err2 := strconv.Atoi(mese)
-if err2 != nil {
-	errore(w,"Errore Mese non numerico", mese)
-	return
-}
-if mm < 1 || mm > 12 {
-	errore(w,"Errore Mese", mese)
-	return
-	}
-ipcmese(w, mm, 0)
-} else {
-t := time.Now().In(time.FixedZone("UTC+1", 0))
-_, mx, gg := t.Date()
-m0 := int(mx)
-// set-dic
-for k:=9; k < 13; k++ {
-//boh?
-    if |* m0 >= 10 && *| m0 < 13 && k >= m0 {
-	if m0 == k {
-		ipcmese(w, k, gg)
-    	} else {
-		ipcmese(w, k, 0)
-    	}
-    }
-}
-// gen-mag
-for k:=1; k < 6; k++ {
-   if (m0 >= 10 && m0 < 13) || (m0 >= 1 && m0 < 6 && k >= m0) {
-// correzione per partire da marzo 2020 !
-//    if (m0 >= 10 && m0 < 13) || (m0 >= 1 && m0 < 6 && k >= 3) {
-	if m0 == k {
-		ipcmese(w, k, gg)
-    	} else {
-		ipcmese(w, k, 0)
-    	}
-    }
-}
-}
-fmt.Fprintf(w, ipcbot, veripc, version)
-}
-***********************************************************************/
 
 func orari(w http.ResponseWriter, r *http.Request) {
 fmt.Fprintf(w, "<html><body><h2>Controllo orari sovrapposti</h2><table><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
