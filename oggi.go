@@ -51,7 +51,7 @@ f.Close()
 func root(w http.ResponseWriter, r *http.Request) {
 
 if r.URL.Path != "/" {
-                        fmt.Fprintf(w, "<html><head><title>Non trovata</title><body><h1>Pagina %s non trovata.</h1><a href=/>Home</a></body></html>", r.URL.Path)
+                        fmt.Fprintf(w, "<html><head><title>Non trovata</title><body><h1>Pagina %s non trovata.</h1><a href=/>Home</a></body></html>", xss(r.URL.Path))
                         return
                 }
 mylog("Init: " + version + "\n")
@@ -174,7 +174,7 @@ fmt.Fprintf(w, "<h2>Libuni augura Buone Feste</h2><img src=/images/Buone-Feste.j
 }
 
 func errore(w http.ResponseWriter, msg string, ddt string) {
-fmt.Fprintf(w, errForm, msg, ddt)
+fmt.Fprintf(w, errForm, msg, xss(ddt))
 fmt.Fprintf(w, mioForm2, anno1_n, anno2_n, version, verac, verqu)
 }
 
