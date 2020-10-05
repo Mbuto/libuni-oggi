@@ -50,7 +50,7 @@ f.Close()
 
 func root(w http.ResponseWriter, r *http.Request) {
 
-if r.URL.Path != "/" {
+if xss(r.URL.Path) != "/" {
                         fmt.Fprintf(w, "<html><head><title>Non trovata</title><body><h1>Pagina %s non trovata.</h1><a href=/>Home</a></body></html>", xss(r.URL.Path))
                         return
                 }
