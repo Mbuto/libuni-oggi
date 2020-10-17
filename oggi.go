@@ -783,8 +783,10 @@ button {visibility: hidden; }
 <body>
 <h1><a href="https://libuni.blogspot.com/"><img src=/images/logo-300.jpg></a>
  Calendario 7 giorni</h1>
+<!--
 <span class=noprint><b><i>Cliccando sul nome corso si accede alla sua descrizione se disponibile.
 <br>Cliccando sul nome docente si accede al suo curriculum se disponibile.</i></b></span>
+-->
 `
 
 const mioForm1 = `
