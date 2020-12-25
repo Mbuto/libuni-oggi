@@ -123,7 +123,7 @@ if (y < y0) || (x < x0) {
 	return
 }
 
-fmt.Fprintf(w,mioForm0)
+fmt.Fprintf(w,mioForm0, formsplash)
 /******************** PIPPE
 if (m > time.June && y == anno2_n ) || (m < time.October && y == anno1_n ) {
 	disp_buone_vacanze(w)
@@ -268,7 +268,7 @@ return("<span title='curriculum non trovato'>" + s + "</span")
 }
 
 func altradata(w http.ResponseWriter, r *http.Request) {
-fmt.Fprintf(w,mioForm0)
+fmt.Fprintf(w,mioForm0, formsplash)
 t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
 if int(m0) > 7 {
@@ -338,7 +338,7 @@ case 2:
 totcor := 0
 extrasegclass := "hid"
 
-fmt.Fprintf(w, calForm0, mesi[mes], mesi[mes], y0)
+fmt.Fprintf(w, calForm0, mesi[mes], mesi[mes], y0, formsplash)
 for d:=1; d <= maxmes; d++ {
 tt := time.Date(y0, time.Month(mes), d, 0, 0, 0, 0, time.FixedZone("GMT+1", 0))
 wd := tt.Weekday()
@@ -638,6 +638,8 @@ img {
 <body>
 <h1><a href="https://libuni.blogspot.com/"><img src=/images/logo-300.jpg></a>
  Calendario Corsi del mese di %s %d</h1>
+<!-- formsplash -->
+<p>%s</p>
 <table><tr><th colspan=2>Giorno</th>
 `
 
@@ -783,6 +785,8 @@ button {visibility: hidden; }
 <body>
 <h1><a href="https://libuni.blogspot.com/"><img src=/images/logo-300.jpg></a>
  Calendario 7 giorni</h1>
+<!-- formsplash -->
+<p>%s</p>
 <!--
 <span class=noprint><b><i>Cliccando sul nome corso si accede alla sua descrizione se disponibile.
 <br>Cliccando sul nome docente si accede al suo curriculum se disponibile.</i></b></span>
