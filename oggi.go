@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "9.Special"
+const version = "9.Special-1"
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
