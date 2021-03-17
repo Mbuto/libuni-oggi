@@ -170,7 +170,10 @@ fmt.Fprintf(w, "<h2>Libuni augura Buone Vacanze</h2><img src=/images/Buone-Vacan
 }
 
 func disp_buone_feste(w http.ResponseWriter) {
-fmt.Fprintf(w, "<h2>Libuni augura Buone Feste</h2><img src=/images/Buone-Feste.jpg width='40%%'><br clear=all><h2>Le attivit&agrave; riprenderanno a Gennaio!</h2>")
+// original
+//fmt.Fprintf(w, "<h2>Libuni augura Buone Feste</h2><img src=/images/Buone-Feste.jpg width='40%%'><br clear=all><h2>Le attivit&agrave; riprenderanno a Gennaio!</h2>")
+// pandemic
+fmt.Fprintf(w, "<h2>Libuni augura Buone Feste</h2><img src=/images/Buone-Feste.jpg width='40%%'><br clear=all>")
 }
 
 func errore(w http.ResponseWriter, msg string, ddt string) {
