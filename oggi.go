@@ -322,7 +322,7 @@ if (annoprimo == false) && (mes >= 10) {
 	y0--
 }
 // FAKE x Calendario Special ***************************
- y0 = 2020
+// y0 = 2020
 
 maxmes := 31
 switch mes {
