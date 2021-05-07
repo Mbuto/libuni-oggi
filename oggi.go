@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "9.Special-1"
+const version = "10.0"
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
@@ -63,11 +63,15 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 // t = time.Date(2020, time.Month(10), 1, 0, 0, 0, 0, time.FixedZone("UTC+1", 0))
 
 y0, m0, d0 := t.Date()
+
+anno1_n = y0
+/****** vers. 10 
 if int(m0) > 5 {
 	anno1_n = y0
 } else {
 	anno1_n = y0 - 1
 }
+*******************/
 
 anno2_n = anno1_n + 1
 anno1_s = fmt.Sprintf("%d", anno1_n)
@@ -274,11 +278,14 @@ func altradata(w http.ResponseWriter, r *http.Request) {
 fmt.Fprintf(w,mioForm0, formsplash)
 t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
+anno1_n = y0
+/********** vers 10
 if int(m0) > 7 {
 	anno1_n = y0
 } else {
 	anno1_n = y0 - 1
 }
+*****************/
 anno2_n = anno1_n + 1
 fmt.Fprintf(w, altra, d0, int(m0), y0, anno2_n, y0)
 }
@@ -295,10 +302,12 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
 mes := int(m0)
 savedy0 := y0
+/**************** vers 10
 annoprimo := true
 if mes < 10 {
 	annoprimo = false
 }
+********************/
 
 //FAKE ***********************************************
 // mes = 10
@@ -315,12 +324,15 @@ return
 
 //BUGFIX
 // CONTROLLO SE la coppia (mes, y0) è congrua con l'AA
+/******** vers 10
 if (mes < int(m0)) && annoprimo {
 	y0++
 }
 if (annoprimo == false) && (mes >= 10) {
 	y0--
 }
+*************************/
+
 // FAKE x Calendario Special ***************************
 // y0 = 2020
 
