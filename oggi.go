@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "10.0"
+const version = "10.1" //w3.css
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
@@ -30,6 +30,7 @@ func init() {
     http.HandleFunc("/calnext", calnext)
     http.HandleFunc("/orari", orari)
     http.HandleFunc("/info", info)
+    http.HandleFunc("/w3css", w3css)
 // MAGIC!
     http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images/"))))
     http.Handle("/text/", http.StripPrefix("/text/", http.FileServer(http.Dir("text/"))))
@@ -559,7 +560,7 @@ fmt.Fprintf(w, "</table><p>Fine controllo: %d corsi, %d conflitti.<br>", len(cor
 if n == 0 {
 	fmt.Fprintf(w, "<b>Non</b> ci sono sovrapposizioni di orari.")
 }
-fmt.Fprintf(w, "<p><a href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<a href='https://libuni.blogspot.com/p/docente-carlo-zappala.html'><span class=cp>&copy; 2018-2019-2020 C. Zappal&agrave;</span></a></body></html>", version)
+fmt.Fprintf(w, "<p><a href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<a href='https://libuni.blogspot.com/p/docente-carlo-zappala.html'><span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></a></body></html>", version)
 }
 
 func yescor(m int, d int) bool {
@@ -602,6 +603,7 @@ const calForm0 = `
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calendario Corsi Libuni - %s</title>
 <link rel="icon" href="/images/favicon.ico" />
+<link rel='stylesheet' href='/w3css'>
 <style>
 @media screen {
 body { background-color:#607d8b; color: white; }
@@ -643,7 +645,7 @@ img {
 #rad {
   background-color: #f4ff81;
   color: navy;
-  width: 130px;
+  width: 260px;
   border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
@@ -651,6 +653,7 @@ img {
 </style>
 </head>
 <body>
+<div class='w3-container'>
 <h1><a href="https://libuni.blogspot.com/"><img src=/images/logo-300.jpg></a>
  Calendario Corsi del mese di %s %d</h1>
 <!-- formsplash -->
@@ -760,6 +763,7 @@ const mioForm0 = `
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oggi in Libuni</title>
 <link rel="icon" href="/images/favicon.ico" />
+<link rel='stylesheet' href='/w3css'>
 <style>
 @media screen {
 body { background-color:#607d8b; color: white; }
@@ -786,7 +790,7 @@ img {
 #rad {
   background-color: #f4ff81;
   color: navy;
-  width: 130px;
+  width: 260px;
   border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
@@ -798,6 +802,7 @@ button {visibility: hidden; }
 </style>
 </head>
 <body>
+<div class='w3-container'>
 <h1><a href="https://libuni.blogspot.com/"><img src=/images/logo-300.jpg></a>
  Calendario 7 giorni</h1>
 <!-- formsplash -->
@@ -809,7 +814,7 @@ button {visibility: hidden; }
 `
 
 const mioForm1 = `
-<h3>Corsi e Attivit&agrave; che si svolg%s %s %d-%d-%d.</h3>
+<h4>Corsi e Attivit&agrave; che si svolg%s %s %d-%d-%d.</h4>
 `
 
 const mioForm2 = `
@@ -818,13 +823,15 @@ const mioForm2 = `
 <blockquote>
 <div id="rad" class="noprint">
 <center>
-<b>Menu</b></center>
-<a href="/"><img class=myicon src="images/home.png" width=20> Libuni Oggi <img class=myicon src="images/home.png" width=20></a><br>
+<b>Menu</b><p>
+<a class='w3-button w3-border w3-border-blue' href="/"><img class=myicon src="images/home.png" width=20>&nbsp;Libuni&nbsp;Oggi&nbsp;<img class=myicon src="images/home.png" width=20></a><br>
+<!---- escluso per anno1-anno2
 <a target='_blank' href="https://libuni.blogspot.com/p/corsi-aa-%d-%d.html">&nbsp;&nbsp;&nbsp;&nbsp;Schede Corsi
 <img class=myicon src='images/right.png' width=20></a><br>
-<a href="https://libuni.blogspot.com/"><img class=myicon src='images/left.png' width=20>
-Sito Web Libuni</a>
-</div>
+---->
+<a class='w3-button w3-border w3-border-blue' href="https://libuni.blogspot.com/"><img class=myicon src='images/left.png' width=20>
+Sito&nbsp;Web&nbsp;Libuni</a>
+</center></div>
 </blockquote>
 </div>
 <span class="noprint">
@@ -834,7 +841,7 @@ Questo sito non utilizza nessun cookie<br>
 e non conserva nessun dato dei visitatori.
 </span>
 <p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543
-<p>v.%s&nbsp;-&nbsp;<a href="https://libuni.blogspot.com/p/docente-carlo-zappala.html"><span class=cp>&copy; 2018-2019-2020 C. Zappal&agrave;</span></a>
+<p>v.%s&nbsp;-&nbsp;<a href="https://libuni.blogspot.com/p/docente-carlo-zappala.html"><span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></a>
 <br>v.ac=%s v.qu=%s
 </body></html>
 `
@@ -845,12 +852,12 @@ const mioForm3 = `
 <input type="hidden" name="anno" value="%d">
 <input type="hidden" name="mese" value="%d">
 <input type="hidden" name="giorno" value="%d">
-<button type="submit">Prossimo Luned&igrave;</button></form>
+<button class='w3-button w3-white w3-border w3-border-orange w3-round-large' type="submit">Prossimo Luned&igrave;</button></form>
 </td><td class="null noprint">
-<form action="/altradata"><button type="submit">Altra data</button></form>
+<form action="/altradata"><button class='w3-button w3-white w3-border w3-border-orange w3-round-large' type="submit">Altra data</button></form>
 </td>
 </td><td class="null noprint">
-<form action="/cal"><button type="submit">Calendario Mensile</button></form>
+<form action="/cal"><button class='w3-button w3-white w3-border w3-border-orange w3-round-large' type="submit">Calendario Mensile</button></form>
 </td>
 `
 
@@ -866,6 +873,7 @@ const altra = `
 </form>
 <div id="rad" class="noprint">
 <a href="/"><img class=myicon src="images/home.png" width=20> Libuni Oggi <img class=myicon src="images/home.png" width=20></a><br>
+</div>
 </div>
 </body>
 </html>

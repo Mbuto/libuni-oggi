@@ -11,8 +11,8 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 180, "Archeologia", "Sabrina Batino", "15.30-17.00", "", "" },
-anacor { 181, "Le donne di Dante", "Lucia Paoletti", "15.30-17.00", "", "" },
-anacor { 1000, "Social Network", "Carlo Zappalà", "15.30-17.00", "", "" },
+anacor { 180, "corso del lunedì", "bravo docente", "15.30-17.00", "", "" },
+anacor { 181, "altro corso del lunedì però più avanti", "docentessa", "15.30-17.00", "", "" },
+anacor { 182, "al merco", "led", "17.15-18:45", "", "" },
 }
-const verac="2021-05-04 11:20:57"
+const verac="2021-05-14 14:11:43"
