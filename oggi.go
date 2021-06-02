@@ -560,7 +560,7 @@ fmt.Fprintf(w, "</table><p>Fine controllo: %d corsi, %d conflitti.<br>", len(cor
 if n == 0 {
 	fmt.Fprintf(w, "<b>Non</b> ci sono sovrapposizioni di orari.")
 }
-fmt.Fprintf(w, "<p><a href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<a href='https://libuni.blogspot.com/p/docente-carlo-zappala.html'><span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></a></body></html>", version)
+fmt.Fprintf(w, "<p><a href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></body></html>", version)
 }
 
 func yescor(m int, d int) bool {
@@ -841,7 +841,7 @@ Questo sito non utilizza nessun cookie<br>
 e non conserva nessun dato dei visitatori.
 </span>
 <p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543
-<p>v.%s&nbsp;-&nbsp;<a href="https://libuni.blogspot.com/p/docente-carlo-zappala.html"><span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></a>
+<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span>
 <br>v.ac=%s v.qu=%s
 </body></html>
 `
