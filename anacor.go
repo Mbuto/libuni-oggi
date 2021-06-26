@@ -11,8 +11,6 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 180, "corso del lunedì", "bravo docente", "15.30-17.00", "", "" },
-anacor { 181, "altro corso del lunedì però più avanti", "docentessa", "15.30-17.00", "", "" },
-anacor { 182, "al merco", "led", "17.15-18:45", "", "" },
+anacor { 1000, "Conversazione sull_Economia di oggi e di domani", "prof. Aldo Sorci", "18:00-19:30", "Cortile Pal.Corgna", "" },
 }
-const verac="2021-05-14 14:11:43"
+const verac="2021-06-26 15:14:08"
