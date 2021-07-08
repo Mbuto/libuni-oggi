@@ -1,3 +1,4 @@
 module github.com/heroku/libuni-oggi
 
-go 1.12
+// +heroku goVersion go1.16
+go 1.16
