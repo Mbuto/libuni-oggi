@@ -325,17 +325,15 @@ return
 
 //BUGFIX
 // CONTROLLO SE la coppia (mes, y0) è congrua con l'AA
-/******** vers 10
-if (mes < int(m0)) && annoprimo {
+if (mes < int(m0)) /* && annoprimo */ {
 	y0++
 }
+/******** vers 10
 if (annoprimo == false) && (mes >= 10) {
 	y0--
 }
 *************************/
 
-// FAKE x Calendario Special ***************************
-// y0 = 2020
 
 maxmes := 31
 switch mes {
