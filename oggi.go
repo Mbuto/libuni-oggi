@@ -558,7 +558,7 @@ savenome = corsi[j].nomeco
 }
 fmt.Fprintf(w, "</table><p>Fine controllo: %d corsi, %d conflitti.<br>", len(corsi), n)
 if n == 0 {
-	fmt.Fprintf(w, "<span class='w3-panel w3-lime'><b>Non</b> ci sono sovrapposizioni di orari.</span>")
+	fmt.Fprintf(w, "<span class='w3-container w3-green'>Non ci sono sovrapposizioni di orari.</span>")
 }
 fmt.Fprintf(w, "<p><button class='w3-button w3-border w3-border-red' onclick='window.close()'>Chiudi</button><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></div></body></html>", version)
 }
