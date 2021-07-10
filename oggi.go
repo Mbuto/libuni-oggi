@@ -522,7 +522,9 @@ fmt.Fprintf(w, nxt, m1)
 
 
 func orari(w http.ResponseWriter, r *http.Request) {
-fmt.Fprintf(w, "<html><body><h2>Controllo orari sovrapposti</h2><table><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
+
+fmt.Fprintf(w, "<html> <head><link rel='stylesheet' href='/w3css'><title>Controllo Orari</title></head> <body><div class=w3-container> <img src=/images/logo-300.jpg></a><h2>Controllo orari sovrapposti</h2><table class='w3-table'><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
+
 n := 0
 saveor := ""
 savenome := ""
@@ -558,7 +560,7 @@ fmt.Fprintf(w, "</table><p>Fine controllo: %d corsi, %d conflitti.<br>", len(cor
 if n == 0 {
 	fmt.Fprintf(w, "<b>Non</b> ci sono sovrapposizioni di orari.")
 }
-fmt.Fprintf(w, "<p><a href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></body></html>", version)
+fmt.Fprintf(w, "<p><a class='w3-button w3-border w3-border-red' href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></div></body></html>", version)
 }
 
 func yescor(m int, d int) bool {
