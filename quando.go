@@ -11,5 +11,6 @@ anno int
 
 var quando = []mytb {
 mytb { 1000, 3, 7, 5, 2021 },
+mytb { 1001, 21, 7, 5, 2021 },
 }
 const verqu="2021-06-26 15:14:14"
