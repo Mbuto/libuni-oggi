@@ -1,6 +1,6 @@
 package main
 
-const linkpref = "2019/08/"
+const linkpref = "2021/08/"
 
 type tblink struct {
 numco int

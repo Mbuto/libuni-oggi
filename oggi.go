@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "10.1" //w3.css
+const version = "10.4" //w3.css linktab
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
@@ -35,6 +35,12 @@ func init() {
     http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images/"))))
     http.Handle("/text/", http.StripPrefix("/text/", http.FileServer(http.Dir("text/"))))
     http.HandleFunc("/robots.txt", robots)
+
+// INIT linktab
+for k := 0 ; k < len(corsi); k++ {
+	x := tblink{corsi[k].numco, strings.ReplaceAll(strings.ToLower(corsi[k].nomeco), " ", "-")+".html"}
+	linktab = append(linktab, x)
+}
 }
 
 func mylog(s string) {
@@ -303,7 +309,7 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
 mes := int(m0)
 savedy0 := y0
-/**************** vers 10
+/**************** vers 10 ***
 annoprimo := true
 if mes < 10 {
 	annoprimo = false
@@ -325,10 +331,11 @@ return
 
 //BUGFIX
 // CONTROLLO SE la coppia (mes, y0) è congrua con l'AA
+/******** vers 10 ****/
 if (mes < int(m0)) /* && annoprimo */ {
 	y0++
 }
-/******** vers 10
+/*************************
 if (annoprimo == false) && (mes >= 10) {
 	y0--
 }
@@ -522,9 +529,7 @@ fmt.Fprintf(w, nxt, m1)
 
 
 func orari(w http.ResponseWriter, r *http.Request) {
-
 fmt.Fprintf(w, "<html> <head><link rel='stylesheet' href='/w3css'><title>Controllo Orari</title></head> <body><div class=w3-container> <img src=/images/logo-300.jpg></a><h2>Controllo orari sovrapposti</h2><table class='w3-table'><tr><th>Num.</th><th>Corso</th><th>gg</th><th>mm</th><th>ora</th></tr>")
-
 n := 0
 saveor := ""
 savenome := ""
@@ -560,7 +565,7 @@ fmt.Fprintf(w, "</table><p>Fine controllo: %d corsi, %d conflitti.<br>", len(cor
 if n == 0 {
 	fmt.Fprintf(w, "<div class='w3-container w3-green'>Non ci sono sovrapposizioni di orari.</div>")
 }
-fmt.Fprintf(w, "<p><button class='w3-button w3-border w3-border-red' onclick='window.close()'>Chiudi</button><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></div></body></html>", version)
+fmt.Fprintf(w, "<p><a class='w3-button w3-border w3-border-red' href='/'>Home</a><p>Libera Università di Citt&agrave; della Pieve APS - Cod.Fisc.: 94056590543<p>v.%s&nbsp;-&nbsp;<span class=cp>&copy; 2018-2021 C. Zappal&agrave;</span></div></body></html>", version)
 }
 
 func yescor(m int, d int) bool {
