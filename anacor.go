@@ -11,8 +11,6 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 180, "mum", "mimmo", "15.30-17.00", "", "" },
-anacor { 181, "dddd", "cc", "15.30-17.00", "", "" },
 anacor { 1000, "Conferenza Economia", "sorci verdi", "15.30-17.00", "", "" },
 anacor { 1001, "Pres. Libro", "L.Paoletti", "19:30-21:00", "", "" },
 }
