@@ -11,7 +11,9 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 1000, "Conversazione sull'Economia di oggi e di domani", "prof. Aldo Sorci", "18:00-19:30", "Cortile Pal.Corgna", "" },
-anacor { 1001, "Presentaz. Libro di Marco Lorenzoni", "Lucia Paoletti", "18:00-19:30", "Cortile della Rocca", "" },
+anacor { 180, "mum", "mimmo", "15.30-17.00", "", "" },
+anacor { 181, "dddd", "cc", "15.30-17.00", "", "" },
+anacor { 1000, "Conferenza Economia", "sorci verdi", "15.30-17.00", "", "" },
+anacor { 1001, "Pres. Libro", "L.Paoletti", "19:30-21:00", "", "" },
 }
-const verac="2021-06-26 15:14:08"
+const verac="2021-07-21 16:36:52"
