@@ -19,5 +19,6 @@ anacor { 184, "L_economia italiana prima e dopo il Recovery (Fondo nazionale di 
 anacor { 185, "Il mito di Edipo", "Silvia Bordoni", "15.30-17.00", "", "" },
 anacor { 186, "L_Ospedale di Città della Pieve nel suo secolo breve", "Massimo Neri", "15.30-17.00", "", "" },
 anacor { 187, "Le donne nel Jazz: dalle origini all_era dello swing", "Claudia Aliotta", "15.30-17.00", "", "" },
+anacor { 1000, "Presentazione Corsi 2021", "Lucia Paoletti", "17.00-18:30", "", "" },
 }
 const verac="2021-09-10 15:12:19"
