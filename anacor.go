@@ -11,9 +11,9 @@ tutor string
 }
 
 var corsi = []anacor {
-anacor { 180, "Leonardo da Vinci e Pietro Vannucci: due protagonisti a confronto", "Luca Marchegiani", "15.30-17.00", "", "" },
-anacor { 181, "Un viaggio negli archivi umbri, fra Rinascimento e Novecento, sulle tracce di personaggi noti e meno noti", "Marilena Rossi Caponeri", "15.30-17.00", "", "" },
-anacor { 182, "Le donne, reali e letterarie, di Dante", "Lucia Paoletti", "15.30-17.00", "", "" },
+anacor { 180, "Leonardo da Vinci e Pietro Vannucci: due protagonisti a confronto", "Luca Marchegiani", "15.30-17.00", "Sala Grande", "" },
+anacor { 181, "Un viaggio negli archivi umbri, fra Rinascimento e Novecento, sulle tracce di personaggi noti e meno noti", "Marilena Rossi Caponeri", "15.30-17.00", "Sala Grande", "" },
+anacor { 182, "Le donne, reali e letterarie, di Dante", "Lucia Paoletti", "15.30-17.00", "Aula Libuni", "" },
 anacor { 183, "Puccini e dintorni", "Andrea Colaiacomo, Giuliano Festuccia, Angela Margaritelli", "15.30-17.00", "", "" },
 anacor { 184, "L_economia italiana prima e dopo il Recovery (Fondo nazionale di ripresa e resilienza)", "Aldo Sorci", "15.30-17.00", "", "" },
 anacor { 185, "Il mito di Edipo", "Silvia Bordoni", "15.30-17.00", "", "" },
