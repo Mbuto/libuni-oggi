@@ -20,5 +20,6 @@ anacor { 185, "Il mito di Edipo", "Silvia Bordoni", "15.30-17.00", "", "" },
 anacor { 186, "L_Ospedale di Città della Pieve nel suo secolo breve", "Massimo Neri", "15.30-17.00", "", "" },
 anacor { 187, "Le donne nel Jazz: dalle origini all_era dello swing", "Claudia Aliotta", "15.30-17.00", "", "" },
 anacor { 1000, "Visita Archivio di Stato - Orvieto", "Marilena Rossi Caponeri", "15.30-17.00", "Orvieto", "" },
+anacor { 1001, "Assemblea dei Soci per elezione delle Cariche Sociali", "", "15.30-17.00", "Sala delle Muse", "" },
 }
-const verac="2021-10-22 16:42:40"
+const verac="2021-11-05 16:40:40"
