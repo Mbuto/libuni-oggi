@@ -18,7 +18,7 @@ anacor { 183, "Puccini e dintorni", "Andrea Colaiacomo, Giuliano Festuccia, Ange
 anacor { 184, "L'economia italiana prima e dopo il Recovery (Fondo nazionale di ripresa e resilienza)", "Aldo Sorci", "15.30-17.00", "Sala delle Muse", "" },
 anacor { 185, "Il mito di Edipo", "Silvia Bordoni", "15.30-17.00", "", "" },
 anacor { 186, "L'Ospedale di Città della Pieve nel suo secolo breve", "Massimo Neri", "15.30-17.00", "", "" },
-anacor { 187, "Le donne nel Jazz: dalle origini all_era dello swing", "Claudia Aliotta", "15.30-17.00", "", "" },
+anacor { 187, "Le donne nel Jazz: dalle origini all'era dello swing", "Claudia Aliotta", "15.30-17.00", "", "" },
 anacor { 1000, "Visita Archivio di Stato - Orvieto", "Marilena Rossi Caponeri", "15.30-17.00", "Orvieto", "" },
 }
 const verac="2021-10-22 16:42:40"
