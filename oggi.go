@@ -515,7 +515,12 @@ if wd == int(giorno_segr_default) {
 	s := fmt.Sprintf("<span title='%s'>Po</span>", orari_segr_default)
 	return s
 }
-return("&nbsp;")
+//modifica per segr. aperta coi corsi
+if yescor(m,g) {
+	return("PS")
+} else {
+	return("&nbsp;")
+}
 }
 
 func calnext(w http.ResponseWriter, r *http.Request) {
@@ -579,6 +584,7 @@ return false
 
 func yesegr(sd int, m int, d int) string {
 // segreteria chiusa fra giugno e settembre
+mylog(fmt.Sprintf("yesegr: %d %d %d\n",sd,m,d))
 
 if m > mesi_segr_a && m < mesi_segr_da {
 	return ""
@@ -590,16 +596,28 @@ for j:=0; j < len(sisegr); j++ {
 		if sisegr[j].orario != "" {
 			return "<span class='yel'>" + sisegr[j].orario + "</span>"
 		} else {
-			return ""
+// modifica per apertura segr tutti i giorni dei corsi!!!
+			if yescor(m,d) {
+				return orari_segr_default
+			} else {
+				return ""
+			}
 		}
 	}
 }
 
 // se non trovato, apre solo il giorno prefissato
+// modifica per apertura segr tutti i giorni dei corsi!!!
+/*************************************
 if sd != giorno_segr_default {
 	return ""
 }
-return orari_segr_default
+**************************************/
+if yescor(m,d) {
+	return orari_segr_default
+} else {
+	return ""
+}
 }
 
 const calForm0 = `
