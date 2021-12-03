@@ -11,7 +11,7 @@ import (
 )
 
 
-const version = "10.4" //w3.css linktab
+const version = "10.5" //w3.css linktab / segr quando corsi ma non eventi
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
@@ -597,7 +597,7 @@ for j:=0; j < len(sisegr); j++ {
 			return "<span class='yel'>" + sisegr[j].orario + "</span>"
 		} else {
 // modifica per apertura segr tutti i giorni dei corsi!!!
-			if yescor(m,d) {
+			if yescor(m,d) && (sisegr[j].orario != "") {
 				return orari_segr_default
 			} else {
 				return ""
@@ -618,6 +618,7 @@ if yescor(m,d) {
 } else {
 	return ""
 }
+return orari_segr_default
 }
 
 const calForm0 = `
