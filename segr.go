@@ -12,5 +12,5 @@ orario string
 }
 
 var sisegr = []extraseg {
-{ 11, 12, ""},
+{ 16, 12, ""},
 }
