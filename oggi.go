@@ -143,7 +143,7 @@ if (m > time.June && y == anno2_n ) || (m < time.October && y == anno1_n ) {
 	return
 }
 ***************************/
-if (m == time.December && d >= 20) || (m == time.January && d <= 6) {
+if (m == time.December && d >= 21) || (m == time.January && d <= 6) {
 	disp_buone_feste(w)
 	t = time.Date(anno2_n, time.January, 6, 0, 0, 0, 0, time.FixedZone("UTC+1", 0))
 } else {
