@@ -72,13 +72,13 @@ t := time.Now().In(time.FixedZone("UTC+1", 0))
 y0, m0, d0 := t.Date()
 
 anno1_n = y0
-/****** vers. 10 
+/****** vers. 10 */
 if int(m0) > 5 {
 	anno1_n = y0
 } else {
 	anno1_n = y0 - 1
 }
-*******************/
+/*******************/
 
 anno2_n = anno1_n + 1
 anno1_s = fmt.Sprintf("%d", anno1_n)
