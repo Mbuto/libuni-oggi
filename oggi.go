@@ -587,6 +587,7 @@ func yesegr(sd int, m int, d int) string {
 mylog(fmt.Sprintf("yesegr: %d %d %d\n",sd,m,d))
 
 if m > mesi_segr_a && m < mesi_segr_da {
+	mylog(fmt.Sprintf("yesegr-ret: %d %d %d\n",sd,m,d))
 	return ""
 }
 
@@ -616,9 +617,11 @@ if sd != giorno_segr_default {
 if yescor(m,d) {
 	return orari_segr_default
 } else {
-	return ""
+	if sd == giorno_segr_default {
+		return orari_segr_default
+	}
 }
-return orari_segr_default
+return ""
 }
 
 const calForm0 = `
