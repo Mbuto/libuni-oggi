@@ -32,7 +32,7 @@ anacor { 197, "Yoga in inglese martedì", "C. Lechaux", "18:30-20:00", "SERA", "
 anacor { 198, "Yoga in inglese giovedì", "C. Lechaux", "18:30-20:00", "SERA", "" },
 anacor { 1000, "Visita Archivio di Stato - Orvieto", "Marilena Rossi Caponeri", "15.30-17.00", "", "" },
 anacor { 1001, "Assemblea dei Soci per elezione delle Cariche Sociali", "", "15.30-17.00", "", "" },
-anacor { 1002, "Progetto Joyce", "", "15.30-17.00", "", "" },
+anacor { 1002, "Progetto Joyce", "", "17.00-19.00", "Sala Grande", "" },
 anacor { 1003, "Otto Marzo", "", "15.30-17.00", "", "" },
 }
 const verac="2021-12-26 14:29:50"
