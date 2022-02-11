@@ -34,5 +34,6 @@ anacor { 1000, "Visita Archivio di Stato - Orvieto", "Marilena Rossi Caponeri", 
 anacor { 1001, "Assemblea dei Soci per elezione delle Cariche Sociali", "", "15.30-17.00", "", "" },
 anacor { 1002, "Progetto Joyce", "", "17.00-19.00", "Sala Grande", "" },
 anacor { 1003, "Otto Marzo", "", "15.30-17.00", "", "" },
+anacor { 1004, "Assemblea dei Soci per approvazione Bilanci", "", "16.00-17.00", "Sala Grande", "" },
 }
 const verac="2021-12-26 14:29:50"
