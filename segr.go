@@ -1,7 +1,7 @@
 package main
 
-const orari_segr_default = "15:30-16:30"
-const giorno_segr_default = 1 // 1 = "lunedì"
+const orari_segr_default = "15:30-17:00"
+const giorno_segr_default = 9 // 1 = "lunedì"
 const mesi_segr_da = 1
 const mesi_segr_a = 6
 
@@ -16,4 +16,6 @@ var sisegr = []extraseg {
 { 3, 2, ""},
 { 8, 2, ""},
 { 2, 3, ""},
+{ 18, 4, ""},
+{ 25, 4, ""},
 }
