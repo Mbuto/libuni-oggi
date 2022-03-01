@@ -36,9 +36,10 @@ anacor { 201, "Gr. Lettura Ulisse", "M.L. Meo", "15.30-17.00", "", "" },
 anacor { 202, "Il colore", "G. Boccianti", "10.00-12.00", "MATTINA", "" },
 anacor { 1000, "Visita Archivio di Stato - Orvieto", "Marilena Rossi Caponeri", "15.30-17.00", "", "" },
 anacor { 1001, "Assemblea dei Soci per elezione delle Cariche Sociali", "", "15.30-17.00", "", "" },
-anacor { 1002, "Progetto Joyce", "M.L.Meo - G.Capoccia", "15.30-17.00", "", "" },
+anacor { 1002, "Progetto Joyce", "M.L.Meo - G.Capoccia", "17.00-18:30", "Sala Grande", "" },
 anacor { 1003, "Otto Marzo", "", "15.30-17.00", "", "" },
 anacor { 1004, "PASQUA", "", "", "FESTIVIT&Agrave;", "" },
 anacor { 1005, "PASQUETTA", "", "", "FESTIVIT&Agrave;", "" },
+anacor { 9000, "Assemblea Appr. Bilanci", "Tesoriere", "16:00-17.00", "Sala Grande", "" },
 }
 const verac="2022-02-25 11:57:30"
