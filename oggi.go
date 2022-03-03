@@ -15,7 +15,7 @@ const version = "10.5" //w3.css linktab / segr quando corsi ma non eventi
 
 const miniscr = 10
 //const aula_def = "Auletta Libuni"
-const aula_def = "Aula Std"
+const aula_def = "Aula Libuni"
 
 var anno1_n int
 var anno1_s string

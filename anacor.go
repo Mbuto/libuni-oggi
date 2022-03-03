@@ -27,7 +27,7 @@ anacor { 192, "Pittura e Disegno", "G. Boccianti", "10.00-12.00", "MATTINA", "" 
 anacor { 193, "Storia del Cinema", "A. Colaiacomo", "15.30-17.00", "", "" },
 anacor { 194, "Scrittura Autobiografica", "L. Lembo", "15.30-17.00", "", "" },
 anacor { 195, "Storia dell’Architettura", "M. Malandrino", "15.30-17.00", "", "" },
-anacor { 196, "Letteratura Italiana", "L. Annunziata", "15.30-17.00", "", "" },
+anacor { 196, "Letteratura Italiana", "L. Annunziata", "15.30-17.00", "Sala Grande", "" },
 anacor { 197, "Yoga in inglese martedì", "C. Lechaux", "19:30-21:00", "", "" },
 anacor { 198, "Yoga in inglese giovedì", "C. Lechaux", "19:30-21:00", "", "" },
 anacor { 199, "Poesia", "E. Seghetta", "15.30-17.00", "", "" },
